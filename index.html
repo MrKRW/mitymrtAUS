@@ -41,31 +41,26 @@
 
     <!-- Hero Section -->
     <header class="hero" id="home">
-        <div class="hero-overlay"></div>
+        <!-- Circular Slideshow on the left -->
+        <div class="slideshow-container">
+            <div class="slideshow">
+                <div class="slide slide-1 active"></div>
+                <div class="slide slide-2"></div>
+                <div class="slide slide-3"></div>
+            </div>
+        </div>
+
         <div class="container hero-content">
+            <div class="hero-spacer"></div>
             <div class="hero-text">
                 <span class="badge">Freshly Cooked Daily</span>
                 <h1>Crispy. Juicy. <span class="highlight">Unforgettable.</span></h1>
                 <p>Craving the classic taste of authentic fish and chips, or a gourmet burger that hits the spot? We've got you covered. Plus, grab your everyday convenience items right here.</p>
                 <div class="hero-buttons">
                     <a href="#menu" class="btn btn-primary">Explore Menu</a>
-                    <a href="#contact" class="btn btn-outline">Find Us</a>
-                </div>
-            </div>
-            <div class="hero-image-placeholder">
-                <div class="glass-card float-card">
-                    <div class="card-icon"><i class="fa-solid fa-burger"></i></div>
-                    <div class="card-info">
-                        <h4>Classic Burger</h4>
-                        <p>100% Beef Patty</p>
-                    </div>
-                </div>
-                <div class="glass-card float-card float-card-2">
-                    <div class="card-icon"><i class="fa-solid fa-fish"></i></div>
-                    <div class="card-info">
-                        <h4>Fish & Chips</h4>
-                        <p>Catch of the day</p>
-                    </div>
+                    <a href="#contact" class="btn btn-play">
+                        <i class="fa-solid fa-play"></i> Watch Video
+                    </a>
                 </div>
             </div>
         </div>
@@ -124,6 +119,30 @@
                     <div class="menu-card-content">
                         <h3>Drinks & Snacks</h3>
                         <p>A wide selection of cold drinks, ice creams, and everyday convenience items.</p>
+                        <button class="btn btn-text order-item-btn">Add to Order <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Menu Item 5 -->
+                <div class="menu-card">
+                    <div class="menu-card-image chicken-burger-bg">
+                        <div class="price-tag">$13.50</div>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Chicken Schnitzel Burger</h3>
+                        <p>Crispy golden chicken schnitzel with fresh lettuce, tomato, and creamy mayo.</p>
+                        <button class="btn btn-text order-item-btn">Add to Order <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Menu Item 6 -->
+                <div class="menu-card">
+                    <div class="menu-card-image loaded-fries-bg">
+                        <div class="price-tag">$9.50</div>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Loaded Fries</h3>
+                        <p>Thick-cut fries generously topped with melted cheese and crispy bacon bits.</p>
                         <button class="btn btn-text order-item-btn">Add to Order <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </div>

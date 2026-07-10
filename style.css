@@ -128,15 +128,14 @@ ul { list-style: none; }
 
 /* Navigation */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background-color: var(--white);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: var(--shadow-sm);
     padding: 1rem 0;
+    box-shadow: var(--shadow-sm);
     transition: var(--transition);
 }
 
@@ -195,31 +194,56 @@ ul { list-style: none; }
 /* Hero Section */
 .hero {
     position: relative;
-    padding-top: 120px; /* Space for navbar */
-    min-height: 100vh;
+    padding-top: 80px; /* Space for navbar */
+    min-height: 100vh; /* Fill entire viewport */
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    background-color: #2b2d31; /* Dark grey from reference */
     overflow: hidden;
 }
 
-.hero-overlay {
+/* Circular Slideshow Container */
+.slideshow-container {
     position: absolute;
-    top: -50%;
-    right: -20%;
-    width: 80%;
-    height: 150%;
-    background: radial-gradient(circle, var(--secondary) 0%, rgba(251,191,36,0) 70%);
-    opacity: 0.15;
+    top: 50%;
+    left: -20vw; /* Scales with screen width */
+    transform: translateY(-50%);
+    width: 100vh; /* Scales with screen height */
+    height: 100vh;
+    min-width: 850px;
+    min-height: 850px;
     border-radius: 50%;
-    z-index: 0;
-    animation: floatBg 20s infinite linear;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 0 50px rgba(0,0,0,0.6);
 }
 
-@keyframes floatBg {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+/* Background Slideshow */
+.slideshow {
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide-1 { background-image: url('images/hero_bg1.png'); }
+.slide-2 { background-image: url('images/hero_bg2.png'); }
+.slide-3 { background-image: url('images/hero_bg3.png'); }
 
 .hero-content {
     display: grid;
@@ -227,13 +251,17 @@ ul { list-style: none; }
     gap: var(--spacing-xl);
     align-items: center;
     position: relative;
-    z-index: 1;
+    z-index: 2;
+}
+
+.hero-text {
+    grid-column: 2;
 }
 
 .badge {
     display: inline-block;
-    background-color: rgba(249, 115, 22, 0.1);
-    color: var(--primary);
+    background-color: rgba(249, 115, 22, 0.9);
+    color: var(--white);
     padding: 0.5rem 1rem;
     border-radius: 50px;
     font-weight: 600;
@@ -243,83 +271,58 @@ ul { list-style: none; }
 
 .hero-text h1 {
     font-size: 4rem;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.hero-image-placeholder {
-    position: relative;
-    height: 500px;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    gap: 1.5rem;
 }
 
-/* Abstract placeholder for hero visual */
-.hero-image-placeholder::before {
-    content: '';
-    position: absolute;
-    width: 350px;
-    height: 350px;
-    background: linear-gradient(45deg, var(--primary), var(--secondary));
-    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-    animation: morph 8s ease-in-out infinite;
-    box-shadow: var(--shadow-lg);
-}
-
-@keyframes morph {
-    0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
-    34% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; }
-    67% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; }
-}
-
-.glass-card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    padding: 1rem;
-    border-radius: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    box-shadow: var(--shadow-lg);
-    position: absolute;
-    z-index: 2;
-}
-
-.card-icon {
-    width: 50px;
-    height: 50px;
-    background-color: var(--primary);
+.btn-play {
+    background: transparent;
     color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-play i {
+    font-size: 1.25rem;
+    color: var(--white);
+    border: 2px solid var(--white);
     border-radius: 50%;
+    width: 45px;
+    height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    transition: var(--transition);
 }
 
-.float-card {
-    top: 20%;
-    left: 0;
-    animation: float 4s ease-in-out infinite;
+.btn-play:hover {
+    color: var(--primary);
 }
 
-.float-card-2 {
-    top: auto;
-    bottom: 20%;
-    left: auto;
-    right: 0;
-    animation: float 5s ease-in-out infinite reverse;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
+.btn-play:hover i {
+    background: var(--white);
+    color: var(--primary);
+    border-color: var(--white);
 }
 
 /* Menu Section */
@@ -379,6 +382,14 @@ ul { list-style: none; }
 
 .convenience-bg {
     background-image: url('images/snacks.png');
+}
+
+.chicken-burger-bg {
+    background-image: url('images/chicken_burger.png');
+}
+
+.loaded-fries-bg {
+    background-image: url('images/loaded_fries.png');
 }
 
 
@@ -617,8 +628,17 @@ ul { list-style: none; }
         justify-content: center;
     }
 
-    .hero-image-placeholder {
-        height: 400px;
+    .hero-text {
+        grid-column: 1; /* Reset grid column */
+    }
+
+    .slideshow-container {
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -20%);
+        width: 600px;
+        height: 600px;
+        opacity: 0.3; /* fade it to background on mobile */
     }
 
     .features-container {
@@ -658,6 +678,14 @@ ul { list-style: none; }
         padding: 2rem;
         box-shadow: var(--shadow-md);
         text-align: center;
+    }
+
+    .nav-links.active a {
+        color: var(--dark);
+    }
+
+    .nav-links.active a:hover {
+        color: var(--primary);
     }
 
     .footer-grid {

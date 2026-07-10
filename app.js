@@ -71,16 +71,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- Navbar Shrink on Scroll ---
+    // --- Navbar Scroll Logic ---
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            navbar.style.padding = '0.5rem 0';
-            navbar.style.boxShadow = 'var(--shadow-md)';
+            navbar.classList.add('scrolled');
         } else {
-            navbar.style.padding = '1rem 0';
-            navbar.style.boxShadow = 'var(--shadow-sm)';
+            navbar.classList.remove('scrolled');
         }
     });
+
+    // --- Hero Slideshow ---
+    const slides = document.querySelectorAll('.slide');
+    if (slides.length > 0) {
+        let currentSlide = 0;
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 5000);
+    }
 
 });
