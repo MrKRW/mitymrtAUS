@@ -353,7 +353,7 @@ ul { list-style: none; }
     box-shadow: var(--shadow-lg);
 }
 
-/* CSS patterned backgrounds for food images */
+/* AI generated backgrounds for food images */
 .menu-card-image {
     height: 200px;
     position: relative;
@@ -361,37 +361,25 @@ ul { list-style: none; }
     align-items: flex-end;
     justify-content: flex-end;
     padding: 1rem;
+    background-size: cover;
+    background-position: center;
 }
 
 .fish-chips-bg {
-    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%), 
-    radial-gradient(circle at 50% 50%, rgba(249, 115, 22, 0.2) 0%, transparent 60%);
-    background-color: #fce7f3; /* subtle pinkish for contrast */
+    background-image: url('images/fish_chips.png');
 }
 
 .burger-bg {
-    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%),
-    radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.2) 0%, transparent 60%);
-    background-color: #fef3c7;
+    background-image: url('images/burger.png');
 }
 
 .calamari-bg {
-    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%),
-    radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.1) 0%, transparent 60%);
-    background-color: #e0f2fe;
+    background-image: url('images/calamari.png');
 }
 
 .convenience-bg {
-    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%),
-    radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 60%);
-    background-color: #d1fae5;
+    background-image: url('images/snacks.png');
 }
-
-/* Add icons as placeholders via pseudo elements */
-.fish-chips-bg::before { content: '\f578'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size: 5rem; color: rgba(249, 115, 22, 0.3); }
-.burger-bg::before { content: '\f805'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size: 5rem; color: rgba(251, 191, 36, 0.4); }
-.calamari-bg::before { content: '\f700'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size: 5rem; color: rgba(14, 165, 233, 0.3); }
-.convenience-bg::before { content: '\f4d8'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size: 5rem; color: rgba(16, 185, 129, 0.3); }
 
 
 .price-tag {
