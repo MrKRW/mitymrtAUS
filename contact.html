@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Golden Crust Takeaway</title>
+    <meta name="description" content="Get in touch with Golden Crust Takeaway. Call us to order or visit us in Mocktown NSW.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" style="background-color: var(--secondary-color);">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-fish-fins"></i> Golden Crust
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Our Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn btn-primary order-btn" id="nav-order-btn">Order Now</button>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header" style="padding-top: 100px; padding-bottom: 40px; background-color: var(--primary-color); color: var(--light-text); text-align: center;">
+        <div class="container">
+            <h1 style="font-family: var(--font-heading); margin-bottom: 10px;">Contact Us</h1>
+            <p style="font-size: 1.1rem; opacity: 0.9;">We'd love to hear from you.</p>
+        </div>
+    </header>
+
+    <!-- Contact Details Section -->
+    <section class="contact-page-section" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="features-container" style="align-items: flex-start;">
+                <div class="contact-info-block" style="flex: 1;">
+                    <h2 style="font-family: var(--font-heading); color: var(--primary-color); margin-bottom: 1.5rem;">Get in Touch</h2>
+                    <p style="margin-bottom: 2rem;">Have a question, feedback, or want to place a large order? Reach out to us using the details below.</p>
+                    
+                    <ul style="list-style: none; margin-bottom: 2rem;">
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                            <div style="background-color: var(--primary-color); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <strong style="display: block;">Address</strong>
+                                <span>123 Sample Road, Mocktown NSW</span>
+                            </div>
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                            <div style="background-color: var(--primary-color); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <strong style="display: block;">Phone</strong>
+                                <span>+61 2 5555 1234</span>
+                            </div>
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                            <div style="background-color: var(--primary-color); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <strong style="display: block;">Email</strong>
+                                <span>hello@goldencrust.sample</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h3 style="font-family: var(--font-heading); color: var(--secondary-color); margin-bottom: 1rem;">Opening Hours</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 0.5rem; display: flex; justify-content: space-between; max-width: 300px; border-bottom: 1px dashed #ccc; padding-bottom: 0.25rem;"><span>Mon - Fri</span> <span>8:00 AM - 8:00 PM</span></li>
+                        <li style="margin-bottom: 0.5rem; display: flex; justify-content: space-between; max-width: 300px; border-bottom: 1px dashed #ccc; padding-bottom: 0.25rem;"><span>Saturday</span> <span>9:00 AM - 8:30 PM</span></li>
+                        <li style="margin-bottom: 0.5rem; display: flex; justify-content: space-between; max-width: 300px; border-bottom: 1px dashed #ccc; padding-bottom: 0.25rem;"><span>Sunday</span> <span>10:00 AM - 7:00 PM</span></li>
+                    </ul>
+                </div>
+
+                <div class="contact-form-block" style="flex: 1; background-color: var(--light-bg); padding: 2rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <h3 style="font-family: var(--font-heading); margin-bottom: 1.5rem; text-align: center;">Send us a message</h3>
+                    <form onsubmit="event.preventDefault(); alert('This is a sample form. Message not sent.');">
+                        <div style="margin-bottom: 1rem;">
+                            <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Your Name</label>
+                            <input type="text" id="name" style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 6px; font-family: inherit;" required>
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email Address</label>
+                            <input type="email" id="email" style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 6px; font-family: inherit;" required>
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Message</label>
+                            <textarea id="message" rows="4" style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 6px; font-family: inherit; resize: vertical;" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer class="footer" id="contact">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <a href="index.html" class="logo footer-logo">
+                    <i class="fa-solid fa-fish-fins"></i> Golden Crust
+                </a>
+                <p>Your friendly neighborhood spot for the best takeaway food and essential convenience items.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Opening Hours</h3>
+                <ul>
+                    <li>Mon - Fri: 8:00 AM - 8:00 PM</li>
+                    <li>Saturday: 9:00 AM - 8:30 PM</li>
+                    <li>Sunday: 10:00 AM - 7:00 PM</li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> 123 Sample Road, Mocktown NSW</li>
+                    <li><i class="fa-solid fa-phone"></i> +61 2 5555 1234</li>
+                    <li><i class="fa-solid fa-envelope"></i> hello@goldencrust.sample</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Golden Crust Takeaway. This is a sample site.</p>
+        </div>
+    </footer>
+
+    <!-- Order Modal (Hidden by default) -->
+    <div class="modal-overlay" id="order-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal"><i class="fa-solid fa-times"></i></button>
+            <h2>Ready to Order?</h2>
+            <p>Give us a call to place your order for pickup.</p>
+            <div class="phone-number-display">
+                <i class="fa-solid fa-phone"></i> +61 2 5555 1234
+            </div>
+            <p class="modal-note">Online ordering coming soon!</p>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>

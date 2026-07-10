@@ -25,26 +25,29 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Smooth Scrolling for Navbar Links ---
     document.querySelectorAll('.nav-links a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Close mobile menu if open
-            if(navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                const bars = mobileMenuBtn.querySelectorAll('.bar');
-                bars[0].style.transform = 'none';
-                bars[1].style.opacity = '1';
-                bars[2].style.transform = 'none';
-            }
+            const href = this.getAttribute('href');
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                if(navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    const bars = mobileMenuBtn.querySelectorAll('.bar');
+                    bars[0].style.transform = 'none';
+                    bars[1].style.opacity = '1';
+                    bars[2].style.transform = 'none';
+                }
 
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            
-            if(targetSection) {
-                const navHeight = document.querySelector('.navbar').offsetHeight;
-                window.scrollTo({
-                    top: targetSection.offsetTop - navHeight,
-                    behavior: 'smooth'
-                });
+                const targetId = href.substring(1);
+                const targetSection = document.getElementById(targetId);
+                
+                if(targetSection) {
+                    const navHeight = document.querySelector('.navbar').offsetHeight;
+                    window.scrollTo({
+                        top: targetSection.offsetTop - navHeight,
+                        behavior: 'smooth'
+                    });
+                }
             }
         });
     });

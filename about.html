@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Golden Crust Takeaway</title>
+    <meta name="description" content="Learn more about Golden Crust Takeaway, your friendly neighborhood spot for fresh food and convenience.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" style="background-color: var(--secondary-color);">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-fish-fins"></i> Golden Crust
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Our Menu</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn btn-primary order-btn" id="nav-order-btn">Order Now</button>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header" style="padding-top: 100px; padding-bottom: 40px; background-color: var(--primary-color); color: var(--light-text); text-align: center;">
+        <div class="container">
+            <h1 style="font-family: var(--font-heading); margin-bottom: 10px;">About Us</h1>
+            <p style="font-size: 1.1rem; opacity: 0.9;">More than just a takeaway.</p>
+        </div>
+    </header>
+
+    <!-- Features / About Section -->
+    <section class="features-section" id="about">
+        <div class="container features-container">
+            <div class="features-text">
+                <h2>Our Story</h2>
+                <p>At Golden Crust, we pride ourselves on being a cornerstone of the community. Whether you need a quick satisfying dinner, a cold drink on a hot day, or to pick up some last-minute essentials, we are here for you. We started with a simple mission: to provide high-quality, freshly cooked food with a smile.</p>
+                <br>
+                <p>Our fish is locally sourced, our chips are cut thick, and our burgers are made with 100% Australian beef. We believe in good food, good portions, and great value.</p>
+                <br>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-check-circle"></i> Fresh, quality ingredients every day</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Fast and friendly service</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Convenience store items available</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Easy parking access</li>
+                </ul>
+            </div>
+            <div class="features-visual">
+                <div class="abstract-shape">
+                    <i class="fa-solid fa-store"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer class="footer" id="contact">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <a href="index.html" class="logo footer-logo">
+                    <i class="fa-solid fa-fish-fins"></i> Golden Crust
+                </a>
+                <p>Your friendly neighborhood spot for the best takeaway food and essential convenience items.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Opening Hours</h3>
+                <ul>
+                    <li>Mon - Fri: 8:00 AM - 8:00 PM</li>
+                    <li>Saturday: 9:00 AM - 8:30 PM</li>
+                    <li>Sunday: 10:00 AM - 7:00 PM</li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> 123 Sample Road, Mocktown NSW</li>
+                    <li><i class="fa-solid fa-phone"></i> +61 2 5555 1234</li>
+                    <li><i class="fa-solid fa-envelope"></i> hello@goldencrust.sample</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Golden Crust Takeaway. This is a sample site.</p>
+        </div>
+    </footer>
+
+    <!-- Order Modal (Hidden by default) -->
+    <div class="modal-overlay" id="order-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal"><i class="fa-solid fa-times"></i></button>
+            <h2>Ready to Order?</h2>
+            <p>Give us a call to place your order for pickup.</p>
+            <div class="phone-number-display">
+                <i class="fa-solid fa-phone"></i> +61 2 5555 1234
+            </div>
+            <p class="modal-note">Online ordering coming soon!</p>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>

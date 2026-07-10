@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golden Crust Takeaway | Fresh Fish & Chips, Burgers & More</title>
-    <meta name="description" content="Your local favorite for freshly cooked fish & chips, juicy burgers, snacks, and convenience items. Fast, friendly, and delicious!">
+    <title>Our Menu | Golden Crust Takeaway</title>
+    <meta name="description" content="Explore our delicious menu of freshly cooked fish & chips, juicy burgers, snacks, and more!">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,14 +17,14 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" style="background-color: var(--secondary-color);">
         <div class="container nav-container">
             <a href="index.html" class="logo">
                 <i class="fa-solid fa-fish-fins"></i> Golden Crust
             </a>
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="menu.html">Our Menu</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html" class="active">Our Menu</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -39,30 +39,11 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero" id="home">
-        <!-- Circular Slideshow on the left -->
-        <div class="slideshow-container">
-            <div class="slideshow">
-                <div class="slide slide-1 active"></div>
-                <div class="slide slide-2"></div>
-                <div class="slide slide-3"></div>
-            </div>
-        </div>
-
-        <div class="container hero-content">
-            <div class="hero-spacer"></div>
-            <div class="hero-text">
-                <span class="badge">Freshly Cooked Daily</span>
-                <h1>Crispy. Juicy. <span class="highlight">Unforgettable.</span></h1>
-                <p>Craving the classic taste of authentic fish and chips, or a gourmet burger that hits the spot? We've got you covered. Plus, grab your everyday convenience items right here.</p>
-                <div class="hero-buttons">
-                    <a href="menu.html" class="btn btn-primary">Explore Menu</a>
-                    <a href="contact.html" class="btn btn-play">
-                        <i class="fa-solid fa-play"></i> Watch Video
-                    </a>
-                </div>
-            </div>
+    <!-- Page Header -->
+    <header class="page-header" style="padding-top: 100px; padding-bottom: 40px; background-color: var(--primary-color); color: var(--light-text); text-align: center;">
+        <div class="container">
+            <h1 style="font-family: var(--font-heading); margin-bottom: 10px;">Our Menu</h1>
+            <p style="font-size: 1.1rem; opacity: 0.9;">Delicious, locally sourced, and made to order.</p>
         </div>
     </header>
 
@@ -70,7 +51,7 @@
     <section class="menu-section" id="menu">
         <div class="container">
             <div class="section-header">
-                <h2>Our Favorites</h2>
+                <h2>All Items</h2>
                 <p>Taste the difference with our locally sourced, freshly prepared meals.</p>
             </div>
             
@@ -145,27 +126,6 @@
                         <p>Thick-cut fries generously topped with melted cheese and crispy bacon bits.</p>
                         <button class="btn btn-text order-item-btn">Add to Order <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features / About Section -->
-    <section class="features-section" id="about">
-        <div class="container features-container">
-            <div class="features-text">
-                <h2>More Than Just a Takeaway</h2>
-                <p>At Golden Crust, we pride ourselves on being a cornerstone of the community. Whether you need a quick satisfying dinner, a cold drink on a hot day, or to pick up some last-minute essentials, we are here for you.</p>
-                <ul class="feature-list">
-                    <li><i class="fa-solid fa-check-circle"></i> Fresh, quality ingredients every day</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Fast and friendly service</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Convenience store items available</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Easy parking access</li>
-                </ul>
-            </div>
-            <div class="features-visual">
-                <div class="abstract-shape">
-                    <i class="fa-solid fa-store"></i>
                 </div>
             </div>
         </div>
